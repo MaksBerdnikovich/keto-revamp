@@ -1,0 +1,12 @@
+.sticky-sidebar{
+    position: absolute;
+    width: auto;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+
+    &.fixed {
+        position: fixed;
+    }
+}

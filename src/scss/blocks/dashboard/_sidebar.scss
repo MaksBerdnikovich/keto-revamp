@@ -1,0 +1,223 @@
+.sidebar-db{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 25px 20px 25px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@include media-lg{
+    .sidebar:not(.open) .sidebar-db{
+        padding: 15px 5px 20px 5px;
+    }
+}
+
+.sidebar-db__logo{
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+
+    a{
+        position: relative;
+        display: block;
+        min-height: 55px;
+        width: 100%;
+
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+
+    img{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    img.open{
+        width: 80px;
+        height: auto;
+    }
+
+    img.close{
+        width: 30px;
+        height: auto;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@include media-lg{
+    .sidebar:not(.open) .sidebar-db__logo img.open{
+        opacity: 0;
+        visibility: hidden;
+    }
+    .sidebar:not(.open) .sidebar-db__logo img.close{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.sidebar-db__menu{
+    position: relative;
+
+    ul{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    li{
+        position: relative;
+        margin-top: 20px;
+    }
+
+    a{
+        position: relative;
+        display: flex;
+        padding-left: 25px;
+        font-size: 13px;
+        font-weight: 700;
+        color: $gray;
+        white-space: nowrap;
+
+        &:hover, &.active{
+            color: $primary;
+        }
+
+        span{
+            transition: opacity 1s;
+        }
+    }
+
+    a:before{
+        content: '';
+        font-family: 'icons';
+        font-size: 16px;
+        font-weight: normal;
+        position: absolute;
+        width: 15px;
+        left: 0;
+        top: -3px;
+        text-align: center;
+    }
+
+    a.item-home:before{
+        content: "\e965";
+    }
+    a.item-welcome:before{
+        content: "\e964";
+    }
+    a.item-keto:before{
+        content: "\e963";
+    }
+    a.item-supplements:before{
+        content: "\e967";
+    }
+    a.item-workouts:before{
+        content: "\e950";
+    }
+    a.item-measure:before{
+        content: "\e948";
+    }
+    a.item-books:before{
+        content: "\e949";
+    }
+    a.item-faq:before{
+        content: "\e942";
+    }
+    a.item-profile:before{
+        content: "\e946";
+    }
+}
+
+.sidebar-db__menu.menu--bottom{
+    margin-top: auto;
+    border-top: 1px solid #DDE9EE;
+    padding-bottom: 90px;
+
+    a.item-fb:before{
+        content: "\e95e";
+    }
+    a.item-te:before{
+        content: "\e945";
+    }
+    a.item-ask:before{
+        content: "\e95c";
+    }
+}
+
+.sidebar-db__copy{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: $gray;
+    font-size: 12px;
+    border-top: 1px solid #DDE9EE;
+    margin-top: 20px;
+    padding-top: 20px;
+    transition: $transition;
+
+    @include media-xs{
+        display: none;
+    }
+}
+
+@include media-lg{
+    .sidebar:not(.open) .sidebar-db__menu a {
+        text-align: center;
+        padding: 0;
+        min-height: 15px;
+
+        &:before{
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .sidebar:not(.open) .sidebar-db__menu a span{
+        opacity: 0;
+        visibility: hidden;
+        transition: none;
+    }
+
+    .sidebar:not(.open) .sidebar-db__menu.menu--bottom{
+        padding: 0;
+    }
+
+    .sidebar:not(.open) .sidebar-db__copy{
+        visibility: hidden;
+        opacity: 0;
+        transition: none;
+        left: -200px;
+    }
+}
+
+.sidebar-toggle{
+    display: none;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    margin-top: -25px;
+    right: -10px;
+    width: 12px;
+    height: 50px;
+    border-radius: 3px;
+    background-color: $dashboard-sidebar;
+    box-shadow: $form-shadow;
+
+    @include media-lg{
+        display: flex;
+    }
+
+    i{
+        transform: rotate(90deg);
+        color: $gray;
+    }
+}
+
+.sidebar:not(.open) .sidebar-toggle i{
+    transform: rotate(-90deg);
+}

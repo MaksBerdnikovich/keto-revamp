@@ -1,0 +1,9 @@
+.label,
+.form-row label{
+    position: relative;
+    display: flex;
+    flex: auto;
+    font-size: 15px;
+    font-weight: 700;
+    color: $dark;
+}

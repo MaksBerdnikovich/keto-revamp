@@ -1,0 +1,106 @@
+.landing-three-choices{
+    position: relative;
+    width: 100%;
+    padding: 90px 0;
+    background-color: #F5F7F1;
+    z-index: 5;
+
+    @include media-sm {
+        padding: 2em 0;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 164px;
+        bottom: -82px;
+        left: 0;
+        background-image: url("../../dist/images/landing/three-choices/waves.png");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+}
+
+.landing-three-choices__back{
+    position: absolute;
+
+    &.back--left {
+        top: 100px;
+        left: 0;
+    }
+
+    &.back--right{
+        bottom: 200px;
+        right: 0;
+    }
+}
+
+.landing-three-choices__wrap{
+    position: relative;
+
+    .grid-row {
+        margin-top: 60px;
+    }
+
+    @include media-sm {
+        .landing-title,
+        .landing-title.invert{
+            text-align: center;
+            justify-content: center;
+        }
+
+        .grid-row.mobile-invert > .grid-col:nth-child(1){
+            order: 2;
+        }
+        .grid-row.mobile-invert > .grid-col:nth-child(2){
+            order: 1;
+        }
+        .grid-row.mobile-invert > .grid-col:nth-child(3){
+            order: 3;
+        }
+    }
+}
+
+.landing-three-choices__image{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    @include media-sm {
+        margin-top: 2em;
+
+        img {
+            width: auto;
+        }
+    }
+
+    @include media-xsm {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.landing-three-choices__info{
+
+    .title-h4{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.landing-three-choices__btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 470px;
+    text-align: center;
+    margin: 0 auto;
+
+    i{
+        width: 90%;
+        margin: 0 auto;
+    }
+}

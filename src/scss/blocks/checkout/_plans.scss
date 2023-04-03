@@ -1,0 +1,230 @@
+.checkout-plans {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+
+    .page-title {
+        width: 100%;
+    }
+}
+
+.checkout-plans__desc{
+    position: relative;
+    width: 340px;
+    padding: 0 10px;
+    margin-top: 235px;
+
+    @include media-md{
+        display: none;
+    }
+}
+
+.checkout-plans-list{
+    display: flex;
+    flex-direction: column;
+
+    li{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 60px;
+        padding: 5px 0;
+        border-top: 1px solid $gray-light;
+
+        &:nth-child(3){
+            min-height: 75px
+        }
+
+        &:last-child {
+            border-bottom: 1px solid $gray-light;
+            padding-right: 120px;
+        }
+
+        i{
+            font-size: 22px;
+            color: $success;
+            margin: 0 auto;
+        }
+
+        p{
+            font-size: 14px;
+            line-height: 1.2;
+        }
+
+        b{
+            display: flex;
+            width: 100%;
+            font-weight: 800;
+        }
+    }
+}
+
+.checkout-plans__grid{
+    position: relative;
+    width: calc(100% - 340px);
+    padding: 0 10px;
+
+    @include media-md{
+        width: 100%;
+    }
+
+    .grid-row {
+        margin: 0 -5px;
+    }
+
+    .grid-col {
+        padding: 0 5px;
+
+        @include media-sm{
+            margin-top: 30px;
+
+            &:first-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.checkout-plan__item{
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: $white;
+    box-shadow: $form-shadow;
+    border-radius: $corner;
+    overflow: hidden;
+    cursor: pointer;
+    transition: $transition;
+
+    &:not(.special) {
+        margin-top: 35px;
+
+        @include media-sm{
+            margin: 0;
+        }
+    }
+
+    &.active {
+        border: 1px solid $success;
+        background-color: $gray-100;
+    }
+
+    &:not(.active):hover{
+        opacity: 0.8;
+    }
+}
+
+.checkout-plan__item-label{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 35px;
+    background-color: $success;
+
+    b{
+        font-weight: 800;
+        text-transform: uppercase;
+        color: $white;
+    }
+}
+
+.checkout-plan__item-caption{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 200px;
+    padding: 10px;
+    text-align: center;
+}
+
+.checkout-plan__item-title{
+    position: relative;
+
+    .tx-bolder{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 17px;
+    }
+}
+
+.checkout-plan__item-price{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-plan__item-price .offer {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px 0 0 0;
+    text-align: center;
+    color: $gray;
+    line-height: 1.2;
+
+    .strikeout{
+        display: inline-flex;
+        margin: 0 auto;
+        @include strikeout($gray, $gray);
+    }
+
+    span + span {
+        width: 100%;
+    }
+}
+
+.checkout-plan__item-price .price {
+    margin: 10px 0 5px 0;
+}
+
+.checkout-plan__item-price .billed {
+    font-size: 14px;
+}
+
+.checkout-plans__item-desc{
+    padding: 0 10px;
+
+    .checkout-plans-list li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .checkout-plans-list li:last-child {
+        padding-right: 0;
+    }
+
+    .checkout-plans-list li b{
+        justify-content: center;
+    }
+
+    .checkout-plans-list li p{
+        display: none;
+        margin-bottom: 10px;
+
+        @include media-md{
+            display: block;
+            text-align: center;
+        }
+    }
+}
+
+.checkout-plan__item-btn{
+    padding: 15px 20px;
+
+    .btn{
+        padding: 5px;
+        width: 100%;
+    }
+}
+
+.checkout-plan__item.special .checkout-plan__item-btn{
+    padding-bottom: 35px;
+}

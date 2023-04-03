@@ -1,0 +1,114 @@
+.layout-landing{
+    position: relative;
+    font-family: 'NunitoSans';
+    font-size: 18px;
+    font-weight: 600;
+    color: $dark;
+    background-color: $white;
+    overflow-x: hidden;
+
+    @include scrollbar(10px);
+}
+
+.layout-landing .main-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.layout-landing .wrapper{
+    position: relative;
+    display: flex;
+    flex: 1 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.layout-landing .container{
+    position: relative;
+    width: 100%;
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    &.offset {
+        max-width: 970px;
+    }
+}
+
+.layout-landing .header{
+    position: relative;
+    width: 100%;
+    background-color: $landing-bg;
+    transition: $transition;
+    z-index: 20;
+
+    &.fixed {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: rgba($landing-bg, 0.95);
+    }
+}
+
+// Elements
+.layout-landing{
+
+    .landing-title{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        &.centered {
+            text-align: center;
+            justify-content: center;
+        }
+
+        &.invert{
+            text-align: right;
+            justify-content: flex-end;
+        }
+    }
+
+    .landing-subtitle{
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        &.centered {
+            text-align: center;
+            justify-content: center;
+        }
+
+        &.invert{
+            text-align: right;
+            justify-content: flex-end;
+        }
+    }
+
+    .landing-text{
+        position: relative;
+        width: 100%;
+
+        p{
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.4;
+
+            & + p {
+                margin-top: 1em;
+            }
+        }
+    }
+
+    @include media-mdx {
+        .leafs-desktop{
+            display: none;
+        }
+    }
+}

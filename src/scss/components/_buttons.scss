@@ -1,0 +1,132 @@
+.btn{
+    position: relative;
+    outline: none;
+    border: none;
+    text-transform: none;
+    transition: $transition;
+
+    &:disabled {
+        opacity: 0.5;
+    }
+
+    &.disabled{
+        pointer-events: none;
+    }
+
+    &.disabled:after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($white, 0.5);
+        z-index: 5;
+    }
+
+    i{
+        margin-right: 5px;
+    }
+}
+
+.btn-solid {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 42px;
+    padding: 5px 35px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+
+    &.btn-small{
+        padding: 5px 12px;
+        min-height: 36px;
+        border-radius: $corner;
+    }
+
+    &.btn-large{
+        font-size: 15px;
+        min-height: 50px;
+        border-radius: $corner;
+    }
+
+    &.btn-xlarge{
+        font-size: 17px;
+        min-height: 64px;
+        border-radius: $corner;
+    }
+
+    @include media-sm {
+        &.btn-large,
+        &.btn-xlarge{
+            white-space: normal;
+        }
+
+        &.btn-xlarge{
+            font-size: 15px;
+            min-height: 50px;
+            border-radius: $corner;
+        }
+    }
+}
+
+.btn-secondary{
+    background-color: $secondary;
+    color: $dark;
+
+    &:not(.no-hover):not(:disabled):not(.disabled):hover {
+        background-color: $gray-500;
+    }
+}
+
+.btn-primary{
+    background-color: $primary;
+    color: $white;
+
+    &:not(.no-hover):not(:disabled):not(.disabled):hover{
+        background-color: $primary-dark;
+    }
+}
+
+.btn-success{
+    background-color: $success;
+    color: $white;
+    box-shadow: $success-shadow;
+
+    &:not(.no-hover):not(:disabled):not(.disabled):hover{
+        background-color: $success-dark;
+    }
+}
+
+.btn-outline {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 36px;
+    padding: 5px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    border: 2px solid;
+    border-radius: $corner;
+
+    &.btn-primary{
+        background-color: transparent;
+        border-color: $primary;
+        color: $primary;
+
+
+        &:not(.no-hover):not(:disabled):not(.disabled):hover{
+            background-color: $primary;
+            color: $white;
+        }
+    }
+
+    &.btn-large {
+        font-size: 15px;
+        min-height: 50px;
+        border-radius: $corner;
+    }
+}

@@ -1,0 +1,36 @@
+.upsell-guarantee{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.upsell-guarantee__image{
+    max-width: 231px;
+    margin: 0 auto;
+}
+.upsell-guarantee__list{
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        @include media-sm{
+            flex-direction: column;
+        }
+    }
+
+    li{
+        padding: 10px 10px 0 10px;
+        text-align: center;
+    }
+
+    li a{
+        font-size: 17px;
+        font-weight: 700;
+        color: $danger;
+    }
+}

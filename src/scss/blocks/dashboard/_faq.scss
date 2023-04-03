@@ -1,0 +1,11 @@
+.faq-db{
+    position: relative;
+
+    .accordion .accordion__item:first-child{
+        margin-top: 0;
+    }
+
+    .accordion .accordion__title.active{
+        color: $primary;
+    }
+}

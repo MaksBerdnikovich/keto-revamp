@@ -1,0 +1,41 @@
+.tabs{
+    position: relative;
+}
+
+.tabs .tabs-navigate{
+    position: relative;
+    width: 100%;
+
+    ul{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    li{
+        margin-right: 25px;
+    }
+
+    a{
+        position: relative;
+        font-weight: 700;
+        font-size: 17px;
+        color: $gray;
+        border-bottom: 2px solid transparent;
+
+        &.active{
+            color: $primary;
+            border-color: $primary;
+        }
+    }
+}
+
+.tabs .tabs-content{
+    position: relative;
+    width: 100%;
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}

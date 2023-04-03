@@ -1,0 +1,47 @@
+.landing-to-lose{
+    position: relative;
+    width: 100%;
+    padding: 90px 0;
+    background-color: $white;
+    z-index: 10;
+
+    @include media-sm {
+        padding: 2em 0;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 164px;
+        bottom: -82px;
+        left: 0;
+        background-image: url("../../dist/images/landing/wish-to/waves.png");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        z-index: 0;
+    }
+}
+
+.landing-to-lose__back{
+    position: absolute;
+    z-index: 1;
+
+    &.back--left {
+        top: 100px;
+        left: 0;
+    }
+
+    &.back--right{
+        top: 700px;
+        right: 0;
+    }
+}
+
+.landing-to-lose__wrap{
+
+    .landing-subtitle{
+        max-width: 750px;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,41 @@
+.circle-chart__progress {
+  position: relative;
+  width: 200px;
+  height: 200px
+}
+
+.circle-chart__percent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.circle-chart__circle {
+  stroke: $primary;
+  stroke-linecap: round;
+  stroke-width: 1.5;
+  fill: none;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center
+}
+
+.circle-chart__circle--negative {
+  -webkit-transform: rotate(-90deg) scale(1, -1);
+  -ms-transform: rotate(-90deg) scale(1, -1);
+  transform: rotate(-90deg) scale(1, -1)
+}
+
+.circle-chart__background {
+  stroke: $gray-light;
+  stroke-width: 1.5;
+  fill: none
+}

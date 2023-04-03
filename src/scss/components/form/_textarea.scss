@@ -1,0 +1,17 @@
+.textarea{
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 250px;
+    padding: 20px;
+    background: $white;
+    box-shadow: $form-shadow;
+    border-radius: $corner;
+    margin: 5px 0 10px 0;
+
+    font-size: 15px;
+    font-weight: 700;
+    color: $primary;
+
+    @include placeholder;
+}

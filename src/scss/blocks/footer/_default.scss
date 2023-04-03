@@ -1,0 +1,117 @@
+.footer{
+    position: relative;
+    flex: 0 0 auto;
+    width: 100%;
+
+    background-color: $white;
+
+    &.footer-single-page{
+        background-color: $dashboard-sidebar;
+    }
+}
+
+.footer-wrap{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+
+    @include media-sm{
+        padding: 25px 0 20px;
+    }
+}
+
+.footer-nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-nav__logo{
+    position: relative;
+    display: inline-flex;
+
+    a:hover{
+        opacity: 0.8;
+    }
+
+    img {
+        max-height: 70px;
+    }
+
+    @include media-sm{
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.footer-nav__menu{
+    position: relative;
+
+    @include media-sm{
+        width: 100%;
+        justify-content: center;
+    }
+
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @include media-sm{
+            width: 100%;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    }
+
+    li{
+        margin-left: 30px;
+
+        @include media-sm{
+            margin: 0 10px;
+        }
+    }
+
+    li:last-child{
+        display: none;
+    }
+
+    a{
+        text-decoration: underline;
+        font-size: 16px;
+        font-weight: 400;
+
+        &:hover{
+            color: $primary;
+        }
+    }
+}
+
+.footer-copy{
+    position: relative;
+    margin-top: 20px;
+
+    p{
+        margin: 0;
+        font-size: 13px;
+        color: $gray;
+
+        @include media-sm{
+            text-align: center;
+        }
+    }
+
+    span{
+        display: flex;
+        width: 100%;
+        color: $dark;
+
+        @include media-sm{
+            text-align: center;
+            justify-content: center;
+        }
+    }
+}

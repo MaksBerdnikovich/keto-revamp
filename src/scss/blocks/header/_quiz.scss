@@ -1,0 +1,41 @@
+.header-quiz {
+    position: relative;
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    text-align: center;
+    padding: 25px 0;
+
+    @include media-sm{
+        padding: 15px 0;
+
+        &.center {
+            justify-content: center;
+            transition: $transition;
+        }
+    }
+}
+
+.header-quiz__logo{
+    position: relative;
+    display: inline-flex;
+
+    a:hover{
+        opacity: 0.8;
+    }
+
+    img {
+        max-height: 70px;
+
+        @include media-sm{
+            max-height: 50px;
+        }
+    }
+}
+
+.header-quiz__btn{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}

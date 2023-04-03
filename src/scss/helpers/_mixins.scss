@@ -1,0 +1,161 @@
+// Media
+@mixin media-lgx {
+    @media only screen and (max-width: 1700px){
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media only screen and (max-width: 1399px){
+        @content;
+    }
+}
+
+@mixin media-mdx {
+    @media only screen and (max-width: 1199px){
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media only screen and (max-width: 991px){
+        @content;
+    }
+}
+
+@mixin media-sm {
+    @media only screen and (max-width: 767px){
+        @content;
+    }
+}
+
+@mixin media-xsm {
+    @media only screen and (max-width: 430px){
+        @content;
+    }
+}
+
+@mixin media-xs {
+    @media only screen and (max-width: 360px){
+        @content;
+    }
+}
+
+@mixin media-desktop {
+    @media only screen and (min-width: 768px){
+        @content;
+    }
+}
+
+// Scrollbar
+@mixin scrollbar($size: 10px, $foreground-color: $scroll-bg, $background-color: $scroll-bg-track) {
+    &::-webkit-scrollbar {
+        width: $size;
+        height: $size;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+        border-radius: $size;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $background-color;
+        border-radius: $size;
+    }
+}
+
+// Animate text-underline
+@mixin text-underline($background: $primary-background) {
+    &{
+        position: relative;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $background;
+        transition: $transition;
+    }
+
+    &.text-underline-show:after{
+        opacity: 1;
+    }
+
+    &.text-underline-hide:after{
+        opacity: 0;
+    }
+
+    &.text-underline-show:hover:after{
+        opacity: 0;
+    }
+
+    &.text-underline-hide:hover:after{
+        opacity: 1;
+    }
+}
+
+// Placeholder
+@mixin placeholder($color: $secondary) {
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &::-moz-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+    &:-moz-placeholder {
+        color: $color;
+    }
+}
+
+// Background transparency
+@mixin bg-color($color) {
+    background-color: $color;
+}
+
+// Background transparency
+@mixin bg-transparency($color, $opacity: 0.5) {
+    background: $color;
+    background: rgba($color, $opacity);
+}
+
+// Gradient
+@mixin gradient($color1: $primary, $color2: $secondary) {
+    &{
+        background-image: linear-gradient(to right, $color1 0%, $color2 100%);
+    }
+}
+
+// Text gradient
+@mixin textGradient($color1, $color2) {
+    &{
+        background: $color1;
+        background: linear-gradient(to right, $color1 0%, $color2 50%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@mixin strikeout ($color1, $color2, $size: 1px, $rotate: 0) {
+    position: relative;
+    color: $color1;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: $size;
+        background-color: $color2;
+        transform: rotate($rotate);
+    }
+}

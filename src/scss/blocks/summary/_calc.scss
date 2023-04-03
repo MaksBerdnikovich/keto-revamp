@@ -1,0 +1,589 @@
+.summary-calc{
+    position: relative;
+}
+
+.summary-calc__info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .sep {
+        display: inline-flex;
+        padding: 0 5px;
+        font-weight: 600;
+    }
+
+    .spacer{
+        padding: 0.2em 0;
+    }
+}
+
+.summary-calc__form{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.summary-calc__graph{
+    position: relative;
+    width: 100%;
+    padding: 30px;
+    min-height: 350px;
+
+    background-color: $white;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
+    border-radius: $corner;
+
+    .canvasjs-chart-credit{
+        display: none;
+    }
+
+    .chartContainer{
+        width: 100%;
+        height: 300px;
+        margin-left: 0px;
+        margin-top: -9px;
+    }
+
+
+
+    @include media-sm{
+        padding: 30px 10px;
+    }
+
+    .legend{
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+
+        ul{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        li{
+            position: relative;
+            margin: 0 10px;
+            padding: 0 10px 0 15px;
+            font-size: 14px;
+            font-weight: 700;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+            }
+        }
+
+        li.curr:before{
+            background-color: $danger;
+        }
+
+        li.goal:before{
+            background-color: $success;
+        }
+    }
+}
+
+.summary-calc__graph-month{
+    position: relative;
+    margin-bottom: 1em;
+    overflow: hidden;
+
+    ul{
+        position: relative;
+        display: flex;
+        min-width: 600px;
+    }
+
+    li{
+        width: calc(100% / 5);
+        text-align: center;
+        font-size: 15px;
+        font-weight: 600;
+        color: $gray;
+
+        @include media-xsm{
+            width: calc(100% / 7);
+        }
+    }
+}
+
+.summary-calc__graph-inner{
+    position: relative;
+    min-height: 245px;
+    background-image: url("../../dist//images/summary/graph-bg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+    }
+
+    .canvasjs-chart-tooltip{
+        margin: 30px 50px !important;
+        box-shadow: none !important;
+
+        div{
+            font-family: 'NunitoSans' !important;
+            font-weight: 700 !important;
+            padding: 5px 10px !important;
+            text-shadow: none !important;
+            min-height: 35px !important;
+            display: flex !important;
+            align-items: center !important;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.summary-calc__graph-line{
+    position: absolute;
+    bottom: 52px;
+    left: 0;
+
+    img{
+        min-width: 600px;
+    }
+}
+
+.summary-calc__graph-points {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    min-width: 600px;
+}
+
+.summary-calc__graph-point{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 5);
+    text-align: center;
+
+    @include media-xsm{
+        width: calc(100% / 7);
+    }
+
+    .btn{
+        margin-bottom: 10px;
+        max-width: 120px;
+
+        span{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .weight{
+        display: inline-flex;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 5px;
+
+        &.weight-success{
+            color: $success;
+        }
+    }
+
+    .point{
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background-color: $white;
+        border-radius: 20px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .point:before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 12px;
+        border-radius: 12px;
+        background-color: $danger;
+    }
+
+    .point-success:before{
+        background-color: $success;
+    }
+}
+
+.summary-calc__graph-point.point--first{
+    margin-top: 50px;
+
+    @include media-xsm{
+        margin-top: 40px;
+    }
+}
+
+.summary-calc__graph-point.point--second{
+    margin-top: 55px;
+
+    @include media-xsm{
+        margin-top: 50px;
+    }
+}
+
+.summary-calc__graph-point.point--last{
+    margin-top: 100px;
+
+    @include media-xsm{
+        margin-top: 100px;
+
+        .btn{
+            order: 3;
+            margin-top: 15px;
+        }
+    }
+
+    @include media-xs{
+        .btn{
+            margin-right: 50px;
+        }
+    }
+}
+
+.summary-calc__plan{
+    position: relative;
+    width: 100%;
+
+    .grid-row{
+        justify-content: center;
+    }
+
+    .grid-col {
+        margin-top: 30px;
+        min-height: 260px;
+        max-width: 350px;
+
+        @include media-xs{
+            min-height: auto;
+        }
+    }
+
+    .grid-item{
+        height: 100%;
+    }
+}
+
+.summary-calc__plan-info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.summary-calc__plan-info.plan-info--yellow{
+    color: $yellow;
+
+    .rs-range-color,
+    .rs-handle {
+        background-color: $yellow !important;
+    }
+}
+
+.summary-calc__plan-info.plan-info--purple{
+    color: $purple;
+
+    .rs-range-color,
+    .rs-handle {
+        background-color: $purple !important;
+    }
+}
+
+.summary-calc__plan-info.plan-info--teal{
+    color: $teal;
+
+    .rs-range-color,
+    .rs-handle {
+        background-color: $teal !important;
+    }
+}
+
+.summary-calc__plan-info.plan-info--red{
+    color: $red;
+
+    .rs-range-color,
+    .rs-handle {
+        background-color: $red !important;
+    }
+}
+
+.summary-calc__plan-round{
+    position: relative;
+    width: 100%;
+}
+
+.summary-calc__plan-title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 17px;
+}
+
+.summary-calc__plan-slider{
+    margin: 0 auto;
+}
+
+.summary-calc__plan-slider .rs-tooltip-text{
+    font-family: $font-family;
+    font-size: 26px;
+    font-weight: 800;
+    color: $dark;
+
+    @include media-xs{
+        font-size: 20px;
+    }
+}
+
+.summary-calc__plan-desc{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+
+    @include media-xs{
+        top: 30px;
+    }
+
+    img{
+        max-height: 22px;
+        width: auto;
+    }
+
+    b{
+        display: inline-flex;
+        margin-top: 1.5em;
+        font-size: 14px;
+
+        @include media-xs{
+            font-size: 12px;
+        }
+    }
+}
+
+.summary-calc__plan-scale{
+    position: relative;
+    width: 100%;
+    margin-top: 15px;
+
+    @include media-xs{
+        max-width: 220px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    li{
+        min-width: 20px;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 600;
+    }
+}
+
+.summary-calc__plan-water{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $white;
+    max-width: 154px;
+
+    p{
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: 20px;
+        padding: 0 5px;
+    }
+
+    span{
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    b{
+        font-size: 26px;
+        font-weight: 800;
+    }
+}
+
+.summary-calc__plan-bmi{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span{
+        font-size: 14px;
+        font-weight: 700;
+        color: $primary;
+    }
+
+    b{
+        display: inline-flex;
+        padding-top: 5px;
+        font-size: 26px;
+        font-weight: 800;
+
+        @include media-xs {
+            font-size: 22px;
+            margin-top: 20px;
+        }
+    }
+}
+
+.summary-calc__plan-bmi-points{
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+
+    ul {
+        position: relative;
+        display: flex;
+    }
+
+    li {
+        display: flex;
+        justify-content: center;
+        width: calc(100% / 3);
+    }
+
+    .point{
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background-color: $white;
+        border-radius: 20px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+
+        &:before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 12px;
+        }
+    }
+
+    .point--success{
+        margin-top: 65px;
+
+        &:before{
+            background-color: $success;
+        }
+
+        @include media-xs {
+            margin-top: 52px;
+        }
+    }
+
+    .point--normal{
+        margin-top: 40px;
+
+        &:before{
+            background-color: $primary;
+        }
+
+        @include media-xs {
+            margin-top: 30px;
+        }
+    }
+
+    .point--fail{
+
+        &:before{
+            background-color: $danger;
+        }
+    }
+}
+
+.summary-calc__plan-icons{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    i{
+        width: 96px;
+        height: 96px;
+        background-color: $secondary-light;
+        padding: 20px;
+        border-radius: 100%;
+    }
+
+    span{
+        display: inline-flex;
+        margin-top: 1em;
+        font-size: 14px;
+        font-weight: 700;
+        color: $primary;
+    }
+
+    b{
+        display: inline-flex;
+        padding-top: 5px;
+        font-size: 26px;
+        font-weight: 800;
+
+        @include media-xs {
+            font-size: 22px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

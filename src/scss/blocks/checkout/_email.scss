@@ -1,0 +1,85 @@
+.email-section{
+    position: relative;
+    width: 100%;
+
+    @include media-desktop{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: -60px;
+    }
+
+    .form{
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .form-item {
+
+        .btn{
+            width: auto;
+            margin: 0 auto;
+        }
+    }
+
+    .alert-danger{
+        font-weight: 700;
+    }
+}
+
+.email-section.login .form-item .btn{
+    width: 140px;
+}
+.email-section.login .form-item .forgot-pass{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: $primary;
+    text-decoration: underline;
+
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+.email-section.reset .page-text{
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.email-section.reset .form-item.back{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .btn{
+        margin: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .back-link{
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color: $gray;
+
+        &:hover{
+            opacity: 0.8;
+        }
+
+        i{
+            margin-right: 10px;
+            transform: scale(-1, 1)
+        }
+
+        span.resend{
+            text-decoration: underline;
+        }
+    }
+}

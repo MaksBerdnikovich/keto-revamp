@@ -1,0 +1,249 @@
+.quiz__item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px;
+}
+
+.quiz__item-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: em(22);
+
+    .text {
+        margin-top: em(16);
+    }
+}
+
+.quiz__item-grid-title{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: em(8);
+}
+
+.quiz__item-grid{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -12px;
+}
+
+.quiz__item-form{
+    .input {
+        color: $primary;
+    }
+}
+
+.quiz__item-col{
+    position: relative;
+    display: flex;
+    margin: 12px 0;
+    padding: 0 12px;
+
+    &.readonly:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+    }
+
+    @include media-sm{
+        width: 100% !important;
+    }
+}
+.quiz__item-grid.row-cols-1 .quiz__item-col{
+    width: 100%;
+}
+.quiz__item-grid.row-cols-2 .quiz__item-col{
+    width: calc(100% / 2);
+}
+.quiz__item-grid.row-cols-3 .quiz__item-col{
+    width: calc(100% / 3);
+}
+.quiz__item-grid.row-cols-4 .quiz__item-col{
+    width: calc(100% / 4);
+}
+.quiz__item-grid.row-cols-5 .quiz__item-col{
+    width: calc(100% / 5);
+}
+
+//Steps custom
+.quiz__item--step0 .quiz__item-grid{
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
+}
+.quiz__item--step0 .quiz__item-radio + label{
+    min-height: 274px;
+    justify-content: space-between;
+}
+.quiz__item--step0 .quiz__item-radio + label i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 94px;
+    height: 94px;
+    border-radius: 100%;
+    background-color: $secondary-light;
+}
+.quiz__item--step0 .quiz__item-radio.male + label i img{
+    max-width: 45px;
+}
+.quiz__item--step0 .quiz__item-radio.female + label i img{
+    max-width: 30px;
+}
+
+.quiz__item--step3 .quiz__item-title .title-h3{
+    display: inline-flex;
+    max-width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-sm{
+        max-width: 100%;
+    }
+}
+
+.quiz__item--step8 .quiz__item-title .text{
+    display: inline-flex;
+    max-width: 48%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-sm{
+        max-width: 100%;
+    }
+}
+.quiz__item--step8 .quiz__item-radio.icon-circle-box + label span {
+    margin-top: 15px;
+}
+
+.quiz__item--step9 .quiz__item-title .title-h3{
+    display: inline-flex;
+    max-width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-sm{
+        max-width: 100%;
+    }
+}
+.quiz__item--step9 .quiz__item-form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    margin: 0 auto;
+
+    @include media-sm{
+        min-width: 100%;
+    }
+}
+
+.quiz__item--step11 .quiz__item-col{
+    flex-direction: column;
+}
+
+//Step finish
+.quiz-result__progress{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.quiz-result__steps{
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+}
+.quiz-result__steps-list{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 -10px;
+}
+.quiz-result__steps-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 15px;
+    width: calc(100%/3);
+
+    i{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        font-size: 15px;
+        color: $white;
+        font-weight: 400;
+        box-shadow: $form-shadow;
+        background-color: $success;
+        border-radius: 100%;
+        transition: $transition;
+    }
+
+    span{
+        display: inline-flex;
+        margin-top: 10px;
+        font-size: 17px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: $success;
+        transition: $transition;
+
+        @include media-sm{
+            font-size: 14px;
+        }
+    }
+
+    &:before{
+        content: '';
+        position: absolute;
+        top: 12px;
+        left: -25%;
+        width: 50%;
+        height: 2px;
+        background-color: $gray-light;
+        transition: $transition;
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        top: 12px;
+        left: -25%;
+        width: 50%;
+        height: 2px;
+        background-color: $success;
+        transition: $transition;
+    }
+
+    &:nth-child(1):before,
+    &:nth-child(1):after{
+        display: none;
+    }
+
+    &.finish:not(.finish--step1) i{
+        background-color: $white;
+    }
+    &.finish:not(.finish--step1) span{
+        color: $dark;
+    }
+    &.finish:after{
+        width: 0;
+    }
+}

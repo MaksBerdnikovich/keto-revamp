@@ -1,0 +1,122 @@
+.keto-db-ebook{
+    position: relative;
+    width: 100%;
+}
+
+.keto-db-ebook__wrap{
+    position: relative;
+}
+
+.keto-db-ebook__item{
+    display: flex;
+    margin: 0 -25px;
+
+    @include media-mdx{
+        margin: 0 -15px;
+    }
+
+    @include media-sm {
+        flex-direction: column-reverse;
+        margin: 0;
+    }
+
+    & > div {
+        padding: 0 25px;
+
+        @include media-mdx{
+            padding: 0 15px;
+        }
+
+        @include media-sm {
+            width: 100%;
+        }
+    }
+}
+
+.keto-db-ebook__text{
+    width: 60%;
+
+    @include media-sm {
+        margin-top: 1em;
+    }
+}
+
+.keto-db-ebook__image{
+    width: 40%;
+
+    @include media-mdx{
+        width: 50%;
+    }
+}
+
+.keto-db-grid {
+
+    .grid-col{
+        margin-top: 25px;
+
+        @include media-mdx{
+            width: 100%;
+        }
+    }
+}
+
+.keto-db-grid__wrap{
+    display: flex;
+    margin: 0 -15px;
+
+    @include media-sm {
+        flex-direction: column;
+        margin: 0;
+    }
+}
+
+.keto-db-grid__image{
+    display: block;
+    padding: 0 15px;
+
+    @include media-sm {
+        margin: 0 auto;
+    }
+
+    img{
+        width: 242px;
+        height: auto;
+        margin-top: -10px;
+    }
+}
+
+.keto-db-grid__image.books{
+    img{
+        width: 214px;
+    }
+}
+
+.keto-db-grid__text{
+    padding: 0 15px;
+
+    .title {
+        font-size: 17px;
+    }
+
+    .text p{
+        font-size: 14px;
+    }
+
+    .button{
+        display: flex;
+        width: 100%;
+    }
+
+    .btn{
+        padding: 0 20px;
+
+        @include media-sm {
+            margin: 0 auto;
+        }
+
+        i{
+            font-size: 17px;
+            margin: -2px 8px 0 0;
+        }
+    }
+}

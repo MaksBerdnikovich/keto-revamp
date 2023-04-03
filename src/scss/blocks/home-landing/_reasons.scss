@@ -1,0 +1,98 @@
+.landing-reasons{
+    position: relative;
+    width: 100%;
+    padding: 90px 0;
+    background-color: #faf8fb;
+    z-index: 11;
+
+    @include media-sm {
+        padding: 2em 0;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 164px;
+        bottom: -82px;
+        left: 0;
+        background-image: url("../../dist/images/landing/reasons/waves.png");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+
+    .separator {
+        @include bg-color(rgba(#8B6457, 0.16))
+    }
+}
+
+.landing-reasons__back{
+    position: absolute;
+
+    &.back--left {
+        top: 100px;
+        left: 0;
+    }
+
+    &.back--right{
+        top: 600px;
+        right: 0;
+    }
+}
+
+.landing-reasons__wrap{
+    .grid-row{
+
+        &.offset {
+            max-width: 970px;
+            margin: 0 auto;
+        }
+    }
+
+    @include media-sm {
+        .landing-title,
+        .landing-title.invert{
+            text-align: center;
+            justify-content: center;
+        }
+
+        .grid-row.mobile-invert > .grid-col:nth-child(1){
+            order: 2;
+        }
+        .grid-row.mobile-invert > .grid-col:nth-child(2){
+            order: 1;
+        }
+        .grid-row.mobile-invert > .grid-col:nth-child(3){
+            order: 3;
+        }
+    }
+}
+
+
+.landing-reasons__image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    img{
+        width: auto;
+
+        @include media-sm {
+            width: 100%;
+        }
+    }
+
+    sup {
+        display: flex;
+        padding: 0 25px;
+        margin-top: 20px;
+        color: #777777;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    @include media-sm {
+        margin-top: 2em;
+    }
+}

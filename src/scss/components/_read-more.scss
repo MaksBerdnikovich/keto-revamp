@@ -1,0 +1,40 @@
+.read-more{
+    position: relative;
+}
+
+.read-more__open,
+.read-more__close{
+    position: relative;
+    display: inline-flex;
+    z-index: 1;
+
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: underline;
+
+    &:hover{
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+}
+
+.read-more__open{
+    color: $primary;
+}
+
+.read-more__close{
+    display: none;
+    color: $success;
+}
+
+.read-more__block{
+    position: relative;
+    width: 100%;
+    height: 0;
+    transition: $transition;
+    overflow: hidden;
+
+    &.active {
+        height: auto;
+    }
+}

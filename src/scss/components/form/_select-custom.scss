@@ -1,0 +1,107 @@
+.select-group{
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.select-group .selectric-wrapper {
+    width: 100%;
+}
+
+.select-group .selectric{
+    position: relative;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+.select-group .selectric .label{
+    display: flex;
+    justify-content: flex-start;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
+    user-select: none;
+    text-align: left;
+}
+
+.select-group .selectric .button{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    text-align: center;
+    font-size: 0;
+    font-weight: normal;
+    line-height: 1;
+
+    &:after{
+        display: none;
+    }
+
+    &:before {
+        font-family: 'icons';
+        content: "\e941";
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 18px;
+        color: $gray;
+        transition: transform 0.2s ease-in-out;
+    }
+}
+
+.select-group .selectric-open .selectric .button {
+    &:before {
+        transform: scale(1, -1);
+    }
+}
+
+.select-group .selectric-items {
+    display: none;
+    position: absolute;
+    padding: 15px;
+    margin-top: 5px;
+    background: $white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 16px 16px;
+    border: 0;
+    z-index: -1;
+}
+.select-group .selectric-open .selectric-items {
+    width: 100% !important;
+    display: block;
+}
+.select-group .selectric-items .selectric-scroll{
+    overflow: visible;
+}
+.select-group .selectric-items ul{
+    display: inline-flex;
+    flex-direction: column;
+}
+.select-group .selectric-items li {
+    position: relative;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 0;
+    background: transparent;
+
+    & + li {
+        margin-top: 10px;
+    }
+}
+.select-group .selectric-items li:hover,
+.select-group .selectric-items li.highlighted {
+    padding: 0;
+    background: transparent;
+    color: $primary;
+}

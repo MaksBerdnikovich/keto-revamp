@@ -1,0 +1,36 @@
+.section{
+    position: relative;
+    padding: 40px;
+    background: $light;
+    box-shadow: $section-shadow;
+    border-radius: $corner;
+
+    & + .section{
+        margin-top: 30px;
+    }
+
+    @include media-sm{
+        padding: 25px 15px;
+    }
+}
+
+.section-title{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.panel {
+    position: relative;
+    padding: 25px;
+    background: $white;
+    box-shadow: $section-shadow;
+    border-radius: $corner;
+
+    @include media-sm{
+        padding: 15px 10px;
+    }
+}

@@ -1,0 +1,28 @@
+.tooltip{
+    display: none;
+}
+
+div[data-tippy-root] .tippy-box {
+    position: relative;
+    background-color: $white;
+    color: $dark;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    border-radius: $corner;
+    box-shadow: 0px 7px 40px rgba(0, 0, 0, 0.14);
+}
+
+div[data-tippy-root] .tippy-content{
+    padding: 10px 15px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: normal;
+    color: $dark;
+}
+
+div[data-tippy-root] .tippy-arrow {
+    width: 12px;
+    height: 12px;
+    color: $white;
+}

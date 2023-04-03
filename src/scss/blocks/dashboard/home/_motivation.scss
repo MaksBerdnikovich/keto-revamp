@@ -1,0 +1,68 @@
+.home-db-motivation{
+    position: relative;
+    width: 100%;
+}
+
+.home-db-motivation__wrap .carousel__viewport{
+    position: relative;
+    width: 100%;
+    background-color: $dashboard-sidebar;
+    box-shadow: $shadow-db-elements;
+    border-radius: $corner;
+
+    &:before, &:after {
+        font-family: $font-family-icon;
+        content: '\e95a';
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: 0;
+        width: 80px;
+        height: 100%;
+        background-color: $dashboard-sidebar;
+        font-size: 40px;
+        line-height: 1.7;
+        color: #D4D4DB;
+        z-index: 5;
+
+        @include media-xsm{
+            font-size: 30px;
+            width: 50px;
+        }
+    }
+    &:before {
+        left: 0;
+        transform: scale(-1,1);
+    }
+    &:after {
+        right: 0;
+    }
+}
+.home-db-motivation__wrap .carousel__slide{
+    min-width: 100%;
+    padding: 20px 80px 15px 80px;
+
+    @include media-xsm{
+        padding: 20px 50px 15px 50px;
+    }
+
+    b{
+        display: flex;
+        width: 100%;
+        font-size: 18px;
+        font-style: italic;
+    }
+
+    span{
+        display: inline-flex;
+        padding-top: 5px;
+        font-size: 14px;
+        color: $gray;
+    }
+}
+
+@include media-xsm{
+    .home-db-motivation__wrap .carousel__nav{
+        display: none;
+    }
+}

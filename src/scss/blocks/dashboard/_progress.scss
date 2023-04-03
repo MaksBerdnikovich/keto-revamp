@@ -1,0 +1,162 @@
+.progress-db{
+    position: relative;
+    width: 100%;
+}
+
+.progress-db__image{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 195px;
+
+    @include media-sm{
+        display: none;
+    }
+}
+
+.progress-db__title{
+    position: relative;
+    width: 100%;
+}
+
+.progress-db__date{
+    position: relative;
+    width: 100%;
+    margin-top: 1em;
+}
+.progress-db__date .form-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    .input{
+        max-width: 150px;
+        margin-left: 20px;
+        text-align: center;
+        justify-content: center;
+        padding: 0;
+        cursor: pointer;
+
+        &::placeholder {
+            color: $primary;
+        }
+    }
+
+    .label{
+        flex: none;
+        font-size: 17px;
+    }
+}
+
+.progress-db__table{
+    position: relative;
+    width: 100%;
+}
+
+.progress-db__table-item{
+    position: relative;
+    width: 100%;
+    max-width: 1410px;
+    margin-top: 25px;
+}
+
+.progress-db__table-item .table{
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+
+    @include scrollbar(4px);
+
+    ul{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid $gray-light;
+
+        &:not(:first-child){
+            border-left: 0;
+        }
+    }
+
+    li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50px;
+        min-width: 150px;
+        padding: 5px 10px;
+        text-align: center;
+        font-size: 14px;
+
+        &:not(:first-child){
+            border-top: 1px solid $gray-light;
+        }
+
+        input {
+            display: flex;
+            max-width: 100px;
+            height: 100%;
+            min-height: 35px;
+            text-align: center;
+            font-size: 14px;
+
+            &.edit{
+                border: 1px solid $gray-light;
+                box-shadow: $form-shadow;
+            }
+        }
+    }
+
+
+    li.table-col__th{
+        font-weight: 700;
+        background-color: #F9F9FD;
+
+        a{
+            margin-left: 15px;
+        }
+    }
+
+    .table-item__edit{
+        color: $primary;
+    }
+
+    .table-item__save{
+        display: none;
+        color: $success;
+        font-size: 18px;
+    }
+
+    .table-item__remove{
+        color: $danger;
+    }
+}
+
+.progress-db__table-btn{
+    position: relative;
+    margin-top: 25px;
+
+    .btn {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+.profile-db-food{
+    position: relative;
+    width: 100%;
+
+    .btn{
+        width: 190px;
+
+        @include media-sm{
+            width: 100%;
+        }
+    }
+}
+
+.profile-db-data{
+    position: relative;
+    width: 100%;
+
+    .btn{
+        width: 190px;
+
+        @include media-sm{
+            width: 100%;
+        }
+    }
+
+    @include media-md{
+        .form-col:not(.col-100){
+            width: 50%;
+        }
+    }
+
+    @include media-sm{
+        .form-col{
+            width: 100% !important;
+        }
+    }
+}
+
+.profile-db-privacy{
+    position: relative;
+    max-width: 1030px;
+
+    .btn{
+        width: 190px;
+
+        @include media-sm{
+            min-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.header-landing{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.header-landing__logo{
+    position: relative;
+    display: inline-flex;
+
+    a:hover{
+        opacity: 0.8;
+    }
+
+    img {
+        max-height: 50px;
+        transition: $transition;
+    }
+
+    @include media-xsm{
+        min-width: 100px;
+    }
+
+    @include media-xs{
+        margin: 0 auto;
+        min-width: auto;
+    }
+}
+
+.header-landing__btn{
+    position: relative;
+
+    @include media-xs{
+        display: none;
+    }
+}
+
+.layout-landing .header.fixed .header-landing {
+    padding: 10px 0;
+}
+
+.layout-landing .header.fixed .header-landing__logo{
+    img {
+        max-height: 45px;
+    }
+}
+
+.layout-landing .header.fixed .header-landing__btn{
+    .btn {
+        min-height: 42px;
+        padding: 5px 35px;
+        border-radius: 20px;
+    }
+}

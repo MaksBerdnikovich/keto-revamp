@@ -1,0 +1,82 @@
+.profile-db-food{
+    position: relative;
+    width: 100%;
+}
+
+.profile-db-food .grid-row {
+    margin: 0 -60px;
+
+    @include media-lg{
+        margin: 0 -25px;
+    }
+
+    @include media-md{
+        margin: 0 -15px;
+    }
+}
+
+.profile-db-food .grid-col{
+    padding: 0 60px;
+
+    @include media-lg{
+        padding: 0 25px;
+    }
+
+    @include media-md{
+        width: 50%;
+        padding: 0 15px;
+    }
+
+    @include media-sm{
+        & + .grid-col{
+            margin-top: 3em;
+        }
+    }
+}
+
+.profile-db-food .grid-col:last-child:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background-color: $gray-light;
+
+    @include media-md{
+        display: none;
+    }
+}
+
+.profile-db-food .quiz__item-grid{
+    justify-content: space-between;
+}
+
+
+.profile-db-food .quiz__item-grid.row-cols-3 .quiz__item-col,
+.profile-db-food .quiz__item-grid.row-cols-4 .quiz__item-col{
+    @include media-md{
+        width: 50%;
+    }
+}
+
+.profile-db-food .quiz__item-checkbox + label {
+    height: 190px;
+    justify-content: center;
+
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.profile-db-food__btn{
+    position: relative;
+    width: 100%;
+
+    .btn{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

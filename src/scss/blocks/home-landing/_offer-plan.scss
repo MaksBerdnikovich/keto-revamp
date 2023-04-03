@@ -1,0 +1,51 @@
+.landing-offer-plan{
+    position: relative;
+    width: 100%;
+    padding: 90px 0;
+    background-color: #F3F3F3;
+    z-index: 4;
+
+    @include media-sm {
+        padding: 2em 0;
+    }
+}
+
+.landing-offer-plan__back{
+    position: absolute;
+
+    &.back--left {
+        top: 100px;
+        left: 0;
+    }
+}
+
+
+.landing-offer-plan__image{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    @include media-sm {
+        margin-top: 2em;
+
+        img {
+            width: auto;
+        }
+    }
+
+    @include media-xsm {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.landing-offer-plan__btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 470px;
+    text-align: center;
+    margin: 0 auto;
+}

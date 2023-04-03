@@ -1,0 +1,128 @@
+.supplements-db{
+    position: relative;
+    width: 100%;
+}
+
+.supplements-db-grid{
+    position: relative;
+
+    .grid-row {
+        margin-top: -25px;
+    }
+
+    .grid-col {
+        margin-top: 25px;
+
+        @include media-mdx{
+            width: 100%;
+        }
+    }
+}
+
+.supplements-db-item{
+    position: relative;
+    display: flex;
+
+    @include media-sm{
+        flex-direction: column;
+    }
+}
+
+.supplements-db-item__image{
+    position: relative;
+    min-width: 100px;
+
+    @include media-sm{
+        max-width: 100px;
+        margin: 0 auto;
+        padding-bottom: 25px;
+    }
+
+    img{
+        width: 100%;
+    }
+}
+
+.supplements-db-item__data {
+    position: relative;
+    display: flex;
+    width: calc(100% - 100px);
+    flex-direction: column;
+    padding-left: 45px;
+
+    @include media-sm{
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.supplements-db-item__info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .title{
+        font-weight: 700;
+        font-size: 17px;
+    }
+
+    .short p{
+        font-size: 14px;
+    }
+
+    .text p{
+        font-size: 14px;
+    }
+
+    .text b{
+        font-size: 14px;
+    }
+
+    .text ol{
+        padding-left: 16px;
+    }
+
+    .text ol li{
+        font-size: 14px;
+        color: $primary;
+
+        & + li {
+            margin-top: 1em;
+        }
+    }
+
+    .text ol li p{
+        color: $dark;
+    }
+}
+
+.supplements-db-item__btns{
+    position: relative;
+    display: flex;
+
+    ul{
+        display: flex;
+        flex: auto;
+        margin: 0 -5px;
+
+        @include media-sm{
+            flex-wrap: wrap;
+        }
+    }
+
+    li {
+        width: calc(100% / 3);
+        padding: 0 5px;
+
+        @include media-sm{
+            width: 100%;
+        }
+    }
+
+    .btn{
+        width: 100%;
+        margin-top: 25px;
+        padding: 0 20px;
+        white-space: normal;
+    }
+}

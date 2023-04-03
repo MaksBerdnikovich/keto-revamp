@@ -1,0 +1,49 @@
+.quantity-group{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    min-width: 120px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $gray-light;
+}
+
+.quantity-group button{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    margin-top: -3px;
+    border-radius: 50%;
+    background-color: $db-elements;
+    color: $gray;
+    font-weight: 700;
+
+    &:hover{
+        opacity: 0.8;
+    }
+
+    &.btn-minus{
+        margin-right: 8px;
+    }
+    &.btn-plus{
+        margin-left: 8px;
+    }
+}
+.quantity-group input,
+.quantity-group span{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.quantity-group input {
+    max-width: 40px;
+}

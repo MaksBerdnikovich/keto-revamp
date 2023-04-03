@@ -1,0 +1,45 @@
+.summary-features{
+    position: relative;
+}
+
+.summary-features__list{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-features__list-item{
+    position: relative;
+    display: flex;
+
+    & + &{
+        margin-top: 30px;
+    }
+
+    @include media-sm{
+        flex-direction: column;
+    }
+}
+
+.summary-features__list-img{
+    position: relative;
+
+    img{
+        width: 60px;
+    }
+}
+
+.summary-features__list-desc{
+    position: relative;
+    width: 100%;
+    margin-left: 25px;
+
+    b{
+        font-size: 17px;
+        font-weight: 800;
+    }
+
+    @include media-sm{
+        margin: 15px 0 0 0;
+    }
+}

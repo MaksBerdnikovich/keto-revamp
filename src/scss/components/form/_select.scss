@@ -1,0 +1,112 @@
+.select{
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.select .selectric-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 50px;
+    padding: 0 20px;
+    background: $white;
+    box-shadow: $form-shadow;
+    border-radius: 16px;
+    margin: 5px 0 10px 0;
+}
+
+.select .selectric{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+}
+
+.select .selectric .label{
+    position: relative;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 700;
+    color: $primary;
+    margin: 0;
+    padding-right: 20px;
+}
+
+.select .selectric .button{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    text-align: center;
+    font-size: 0;
+    font-weight: normal;
+    line-height: 1;
+
+    &:after{
+        display: none;
+    }
+
+    &:before {
+        font-family: 'icons';
+        content: "\e941";
+        font-size: 21px;
+        color: $gray;
+        transition: transform 0.2s ease-in-out;
+    }
+}
+
+.select .selectric-open .selectric .button {
+    &:before {
+        transform: scale(1, -1);
+    }
+}
+
+.select .selectric-items {
+    display: none;
+    position: absolute;
+    padding: 10px 20px;
+    background: $white;
+    box-shadow: $form-shadow;
+    border-radius: $corner;
+    margin-top: 5px;
+    border: 0;
+    z-index: -1;
+}
+.select .selectric-open .selectric-items {
+    width: 100% !important;
+    display: block;
+}
+.select .selectric-items .selectric-scroll{
+    overflow: visible;
+}
+.select .selectric-items ul{
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+}
+.select .selectric-items li {
+    position: relative;
+    width: 100%;
+    margin: 5px 0;
+    padding: 0 !important;
+    background: transparent !important;
+    color: $dark;
+
+    font-size: 15px;
+    font-weight: 700;
+    transition: $form-transition;
+}
+.select .selectric-items li:hover {
+    color: $success;
+}
+.select .selectric-items li.highlighted {
+    color: $primary;
+}

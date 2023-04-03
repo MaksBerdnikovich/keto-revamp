@@ -1,0 +1,19 @@
+.page-title{
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+    &.left--position{
+        padding-right: 15px;
+        margin-right: auto;
+    }
+
+    &.right--position{
+        padding-left: 15px;
+        margin-left: auto;
+    }
+}
+

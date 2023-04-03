@@ -1,0 +1,70 @@
+.keto-db-modal{
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    padding: 0 !important;
+    background-color: $dashboard-bg;
+    border-radius: $corner;
+    overflow: hidden;
+
+    .is-close {
+        width: 30px;
+        height: 30px;
+        top: 15px !important;
+        right: 15px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background-color: $primary;
+        border-radius: 50%;
+        transition: $transition;
+    }
+
+    .is-close svg{
+        width: 15px !important;
+    }
+
+    .is-close:hover{
+        opacity: 0.8;
+    }
+}
+
+.keto-db-modal__image{
+    position: relative;
+    width: 100%;
+    max-height: 230px;
+    overflow: hidden;
+
+    @include media-sm{
+        max-height: none;
+    }
+
+    img{
+        margin-top: -30px;
+
+        @include media-sm{
+            margin: 0;
+        }
+    }
+}
+
+.keto-db-modal__text{
+    position: relative;
+    width: 100%;
+    padding: 45px;
+
+    @include media-sm{
+        padding: 25px;
+    }
+
+    .page-title{
+        margin-bottom: 2em;
+
+        @include media-sm{
+            margin-bottom: 1em;
+        }
+    }
+
+    p{
+        font-size: 14px;
+    }
+}

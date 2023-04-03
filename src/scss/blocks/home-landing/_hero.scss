@@ -1,0 +1,91 @@
+.landing-hero{
+    position: relative;
+    width: 100%;
+    background-color: $landing-bg;
+}
+
+.landing-hero-back{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    @include media-md {
+        display: none;
+    }
+}
+
+.landing-hero__wrap{
+    padding-top: 25px;
+
+    .grid-col:first-child{
+        padding-bottom: 50px;
+    }
+
+    .landing-text .text{
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .landing-text .link{
+        position: absolute;
+        padding: 0 0 0 10px;
+        white-space: nowrap;
+
+        &:hover{
+            opacity: 0.8;
+        }
+
+        i {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        @include media-xsm{
+            position: relative;
+            display: flex;
+            padding: 10px 0 0 0;
+        }
+    }
+
+    .landing-text .fl-full{
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 700;
+
+        .btn {
+            padding: 0 20px;
+            margin-left: 10px;
+        }
+    }
+
+    @include media-md {
+        .grid-col.col-50 {
+            width: 100%;
+        }
+    }
+}
+
+.landing-hero__image{
+    position: relative;
+    height: 100%;
+    min-height: 465px;
+
+    img{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    @include media-md{
+        display: flex;
+        align-items: flex-end;
+        min-height: auto;
+    }
+
+    @include media-md{
+        img{
+            position: relative;
+        }
+    }
+}

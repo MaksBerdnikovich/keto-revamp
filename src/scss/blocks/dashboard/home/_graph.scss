@@ -1,0 +1,139 @@
+.home-db-graph{
+    position: relative;
+    width: 100%;
+}
+
+.home-db-graph__wrap{
+    position: relative;
+    width: 100%;
+    padding: 30px;
+    min-height: 350px;
+
+    background-color: $white;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
+    border-radius: $corner;
+
+    &:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 25px;
+        background-color: $white;
+        width: 150px;
+        height: 20px;
+        z-index: 1;
+    }
+
+    .canvasjs-chart-credit{
+        display: none;
+    }
+
+    .chartContainer{
+        width: 100%;
+        height: 300px;
+        margin-left: 0px;
+        margin-top: -9px;
+    }
+
+    @include media-sm{
+        padding: 30px 10px;
+    }
+
+}
+
+.home-db-graph__wrap .stays{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    bottom: 65px;
+    left: 45%;
+
+    i{
+        font-size: 150px;
+        line-height: 0;
+        color: $success;
+    }
+
+    @include media-xsm{
+        display: none;
+    }
+}
+
+.home-db-graph__wrap .legend{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+
+    ul{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    li{
+        position: relative;
+        margin: 0 15px;
+        padding: 0 10px 0 15px;
+        font-size: 14px;
+        font-weight: 700;
+
+        @include media-xsm{
+            margin: 0 5px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+        }
+    }
+
+    li.curr:before{
+        background-color: $danger;
+    }
+
+    li.goal:before{
+        background-color: $success;
+    }
+}
+
+.home-db-graph__inner{
+    position: relative;
+    min-height: 245px;
+    background-image: url("../../dist//images/summary/graph-bg.png");
+    background-repeat: repeat-x;
+    background-position: center center;
+    overflow: hidden;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+    }
+
+    .canvasjs-chart-tooltip{
+        margin: 30px 50px !important;
+
+        div{
+            font-family: 'NunitoSans' !important;
+            font-weight: 700 !important;
+            padding: 5px 10px !important;
+            text-shadow: none !important;
+            min-height: 35px !important;
+            display: flex !important;
+            align-items: center !important;
+        }
+    }
+}

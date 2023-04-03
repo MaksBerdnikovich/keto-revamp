@@ -1,0 +1,229 @@
+.filter-modal__title{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include media-sm{
+        flex-wrap: wrap;
+    }
+
+    &.centered{
+        text-align: center;
+        padding: 0 20px;
+    }
+}
+
+.filter-modal__title .switcher{
+    position: relative;
+
+    @include media-sm{
+        width: 100%;
+    }
+
+    ul{
+        display: flex;
+
+        @include media-sm{
+            justify-content: center;
+        }
+    }
+
+    li{
+        margin-left: 30px;
+
+        @include media-sm{
+            margin-left: 1em;
+            margin-right: 1em;
+            margin-top: 1em;
+        }
+    }
+
+    a{
+        position: relative;
+        font-size: 17px;
+        font-weight: 700;
+        color: $gray;
+        outline: none !important;
+        border-bottom: 1px solid transparent;
+
+        &.active{
+            color: $primary;
+            border-color: $primary;
+        }
+    }
+}
+
+.filter-modal__data{
+    position: relative;
+    margin-top: 20px;
+}
+
+.filter-modal__data-table{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-modal__data-caption{
+    position: relative;
+    background-color: $dashboard-sidebar;
+    border-radius: 4px;
+
+    @include media-sm{
+        display: none;
+    }
+
+    ul{
+        display: flex;
+        min-height: 40px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px 0 180px;
+    }
+
+    li{
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+    }
+}
+
+.filter-modal__data-list{
+    position: relative;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px 0 0;
+    border-bottom: 1px solid $gray-light;
+
+    @include media-sm{
+        flex-wrap: wrap;
+        padding: 10px 0;
+
+        &:first-child{
+            border-top: 1px solid $gray-light;
+        }
+    }
+
+    .title{
+        font-size: 14px;
+        width: 180px;
+        font-weight: 700;
+        padding-right: 20px;
+
+        @include media-sm{
+            width: 100%;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+    }
+
+    ul{
+        display: flex;
+        width: calc(100% - 180px);
+        align-items: center;
+        justify-content: space-between;
+
+        @include media-sm{
+            width: 100%;
+            flex-wrap: wrap;
+        }
+    }
+
+    .checkbox-group{
+        height: 24px;
+        width: 24px;
+        padding: 0;
+        margin: 0;
+
+        @include media-sm{
+            width: calc(100% / 3);
+            margin: 5px 0;
+        }
+    }
+
+    .checkbox-group .label{
+        display: none;
+        padding-left: 30px;
+        white-space: nowrap;
+        font-size: 12px;
+        font-weight: 600;
+
+        @include media-sm{
+            display: block;
+        }
+    }
+
+    .checkbox-group .checker{
+        width: 24px;
+        height: 24px;
+        margin: 0 auto;
+        background-color: $dashboard-sidebar;
+        border: 0;
+    }
+    .checkbox-group input:checked ~ .checker{
+        background-color: $success;
+    }
+    .checkbox-group input:checked ~ .checker:after{
+        color: $white;
+    }
+}
+
+.filter-modal__btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+
+    .btn{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+.filter-modal__icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i{
+        font-size: 80px;
+        height: 80px;
+        width: 80px;
+        color: $primary;
+    }
+}
+
+.filter-modal__btns{
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .btn{
+        width: 140px;
+        margin: 0 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

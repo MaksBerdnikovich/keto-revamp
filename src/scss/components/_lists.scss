@@ -1,0 +1,44 @@
+.styled-list{
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.styled-list ul{
+    display: flex;
+    flex-direction: column;
+}
+.styled-list li{
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 1em;
+
+    &:before{
+        content: "\e904";
+        font-family: 'icons';
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        top: -3px;
+        left: 0;
+        font-size: 22px;
+        color: $success;
+        border-radius: 100%;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
+    }
+}
+
+.styled-list.small li{
+    padding-left: 20px;
+
+    &:before{
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        top: 10px;
+        left: 0;
+        background-color: $primary;
+        border-radius: 100%;
+    }
+}

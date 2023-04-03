@@ -1,0 +1,57 @@
+.header-db{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 50px;
+}
+
+.header-db__title{
+    margin-right: auto;
+    font-size: 17px;
+}
+
+
+.header-db__user,
+.header-db__logout,
+.header-db__button{
+    font-size: 15px;
+    margin-left: 30px;
+
+    i{
+        margin: 2px 5px 0 0;
+    }
+
+    @include media-sm{
+        margin-left: 15px;
+
+        span{
+            display: none;
+        }
+    }
+
+    a:hover{
+        opacity: 0.8;
+    }
+}
+
+.header-db__button{
+    font-size: 15px;
+    font-weight: 700;
+    color: $primary;
+
+    a{
+        display: flex;
+        align-items: center;
+    }
+
+    i{
+        font-size: 20px;
+        margin: -6px 8px 0 0;
+
+        @include media-sm{
+            font-size: 16px;
+            margin: -4px 5px 0 0;
+        }
+    }
+}

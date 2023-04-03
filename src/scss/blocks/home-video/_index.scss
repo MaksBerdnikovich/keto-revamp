@@ -1,0 +1,25 @@
+.home-video{
+    position: relative;
+    width: 100%;
+}
+
+.home-video-section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-video__links{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+
+    .btn{
+        width: 100%;
+        max-width: 370px;
+        margin-bottom: 1em;
+    }
+}

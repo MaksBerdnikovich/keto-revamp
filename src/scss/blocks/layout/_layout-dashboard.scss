@@ -1,0 +1,91 @@
+.layout-dashboard{
+    position: relative;
+    font-family: 'NunitoSans';
+    font-size: 16px;
+    font-weight: 400;
+    color: $dark;
+    background-color: $dashboard-bg;
+    overflow-x: hidden;
+
+    @include scrollbar(10px);
+}
+
+.layout-dashboard .main-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.layout-dashboard .wrapper{
+    position: relative;
+    display: flex;
+    flex: 1 0 auto;
+    width: 100%;
+    margin-top: 50px;
+    padding: 40px 0;
+    z-index: 1;
+
+    @include media-sm{
+        padding: 25px 0;
+    }
+}
+
+.layout-dashboard .sidebar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 180px;
+    min-height: 100%;
+    background-color: $dashboard-sidebar;
+    z-index: 3;
+    transition: $transition;
+
+    @include media-lg{
+        width: 50px;
+
+        &.open{
+            width: 180px;
+        }
+    }
+}
+
+.layout-dashboard .header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: $white;
+    box-shadow: $shadow-bottom-db;
+    z-index: 2;
+}
+
+.layout-dashboard .footer{
+    position: relative;
+    flex: 0 0 auto;
+    width: 100%;
+
+    background-color: $dashboard-sidebar;
+    z-index: 1;
+}
+
+.layout-dashboard .container{
+    position: relative;
+    width: 100%;
+    padding: 0 30px 0 210px;
+
+    @include media-lg{
+        padding: 0 15px 0 65px;
+    }
+}
+
+.layout-dashboard .coming-soon{
+    left: calc(50% + 90px);
+
+    @include media-sm{
+        white-space: nowrap;
+        left: calc(50% + 25px);
+    }
+}

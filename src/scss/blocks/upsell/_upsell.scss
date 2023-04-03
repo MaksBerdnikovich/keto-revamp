@@ -1,0 +1,168 @@
+.upsell .text.width-65{
+    max-width: 65%;
+
+    @include media-sm{
+        max-width: 100%;
+    }
+}
+.upsell .text.width-70{
+    max-width: 70%;
+    font-size: 17px;
+
+    @include media-sm{
+        max-width: 100%;
+    }
+}
+.upsell .text.width-80{
+    max-width: 80%;
+    font-weight: 600;
+
+    @include media-sm{
+        max-width: 100%;
+    }
+}
+.upsell.v1 .page-title{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.upsell.v3 .upsell-no-thanks-btn,
+.upsell.v4 .upsell-no-thanks-btn{
+    font-size: 16px;
+    margin: 0;
+}
+
+.upsell-no-thanks-btn{
+    position: relative;
+    margin-top: 40px;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: underline;
+
+    &:hover{
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+}
+
+.upsell-order-btn{
+    min-width: 370px;
+
+    @include media-sm{
+        min-width: 100%;
+    }
+}
+
+.upsell-price{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: $gray;
+
+    .strikeout{
+        @include strikeout($gray, $gray)
+    }
+
+    .title-h2{
+        padding: 0 15px;
+    }
+}
+
+.upsell-agree{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .checkbox-group{
+        padding-left: 25px;
+    }
+    .checkbox-group .checker{
+        width: 18px;
+        height: 18px;
+        background-color: $primary;
+    }
+    .checkbox-group .checker:after{
+        font-size: 12px;
+        color: $white;
+    }
+}
+
+.upsell-prices{
+    position: relative;
+    width: 100%;
+
+    ul{
+        display: flex;
+        justify-content: center;
+        margin: 0 -60px;
+
+        @include media-sm{
+            flex-direction: column;
+        }
+    }
+
+    li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 60px;
+        text-align: center;
+
+        @include media-sm{
+            &:last-child {
+                margin-top: 25px;
+            }
+        }
+    }
+
+    li b{
+        font-size: 18px;
+        font-weight: 700;
+        padding-bottom: 15px;
+
+        @include media-sm{
+            padding-bottom: 0;
+        }
+    }
+}
+
+.upsell-separator{
+    position: relative;
+    margin: 40px 0;
+    width: 100%;
+    height: 1px;
+    background-color: $gray-light;
+
+    @include media-sm{
+        margin: 25px 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

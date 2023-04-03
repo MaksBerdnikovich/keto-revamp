@@ -1,0 +1,103 @@
+.upsell-modal{
+    position: relative;
+    width: 100%;
+    max-width: 780px;
+    padding: 0 !important;
+    background-color: transparent !important;
+    cursor: auto !important;
+
+    .carousel__button.is-close{
+        display: none;
+    }
+
+    .page-title:not(.capitalize){
+        text-transform: uppercase;
+    }
+}
+
+.upsell-modal__btn{
+    position: relative;
+    width: 370px;
+    margin: 0 auto;
+
+    @include media-sm{
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+.upsell-modal__special{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upsell-modal__special-img{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .plus{
+        padding: 0 15px 0 20px;
+        font-weight: 800;
+        font-size: 30px;
+        color: $success;
+        margin-left: -60px;
+    }
+
+    @include media-sm{
+        i{
+            width: calc(100% / 2);
+        }
+
+        .plus{
+            margin-left: -30px;
+        }
+    }
+}
+
+.upsell-modal__special-price{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .regular{
+        color: $gray;
+        margin-bottom: 0.5em;
+
+        .strikeout{
+            @include strikeout($gray, $gray)
+        }
+    }
+
+    .instant{
+        font-weight: 600;
+        font-size: 17px;
+        margin-bottom: 0.5em;
+    }
+
+    .total{
+        font-weight: 800;
+        font-size: 17px;
+    }
+}
+
+.upsell-modal__text-change{
+    position: relative;
+    width: 100%;
+    text-align: center;
+
+    a{
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    a:hover{
+        opacity: 0.8;
+    }
+}

@@ -1,0 +1,51 @@
+.summary-your-get{
+    position: relative;
+}
+
+.summary-your-get_image{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.summary-your-get_grid{
+    position: relative;
+
+    .grid-col{
+        margin-top: 20px;
+    }
+
+    .grid-item{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+        align-self: flex-start;
+        padding: 20px 15px 15px 15px;
+        border: 1px solid $gray-light;
+        background-color: $white;
+        border-radius: $corner;
+    }
+
+    .grid-item img{
+        width: auto;
+        height: 40px;
+    }
+
+    .grid-item b{
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        width: 100%;
+    }
+}
+
+.summary-your-get_form{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}

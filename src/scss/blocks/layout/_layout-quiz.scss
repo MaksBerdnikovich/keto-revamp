@@ -1,0 +1,118 @@
+$container: 1030px;
+$container-offset: 780px;
+$quiz-max-widths: 750px;
+
+.layout-quiz{
+    position: relative;
+    font-family: 'NunitoSans';
+    font-size: 16px;
+    font-weight: 400;
+    color: $dark;
+    background-color: $body;
+    overflow-x: hidden;
+
+    @include scrollbar(10px);
+}
+
+.layout-quiz .back-image{
+    position: fixed;
+    display: flex;
+    z-index: -1;
+    max-width: calc(100vw - #{$quiz-max-widths});
+
+    @include media-md{
+        display: none;
+    }
+
+    &.image--top-left{
+        justify-content: flex-start;
+        left: 0;
+        top: 0;
+    }
+
+    &.image--top-right{
+        justify-content: flex-end;
+        right: 0;
+        top: 0;
+    }
+
+    &.image--bottom-left{
+        position: absolute;
+        justify-content: flex-start;
+        left: 0;
+        bottom: 0;
+
+        &.with-footer{
+            bottom: 200px;
+        }
+    }
+
+    &.image--bottom-right{
+        position: absolute;
+        justify-content: flex-start;
+        right: 0;
+        bottom: 0;
+
+        &.with-footer{
+            bottom: 200px;
+        }
+    }
+}
+
+//Compensate fancy popup show
+body.compensate-for-scrollbar .back-image.image--top-right,
+body.compensate-for-scrollbar .back-image.image--bottom-right {
+    right: 10px;
+}
+
+.layout-quiz .main-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.layout-quiz .wrapper{
+    position: relative;
+    display: flex;
+    flex: 1 0 auto;
+    width: 100%;
+    padding-bottom: 40px;
+
+    @include media-sm{
+        padding-bottom: 25px;
+    }
+
+    &.centered{
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding-bottom: 0;
+    }
+}
+
+.layout-quiz .container{
+    position: relative;
+    width: 100%;
+    max-width: $container;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    &.offset {
+        max-width: $container-offset;
+    }
+}
+
+.layout-quiz .header{
+    position: relative;
+    width: 100%;
+
+    &.header--quiz {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 5;
+    }
+}

@@ -1,0 +1,371 @@
+@mixin font-face($url, $weight){
+    @font-face{
+        src: local('#{$url}'),
+        url("../fonts/#{$url}.woff") format('woff'),
+        url("../fonts/#{$url}.woff2") format("woff2");
+
+        font-family: 'NunitoSans';
+        font-weight: #{$weight};
+        font-style: normal;
+    }
+}
+
+@include font-face('NunitoSans-UltraLight', 200);
+@include font-face('NunitoSans-Light', 300);
+@include font-face('NunitoSans-Regular', 400);
+@include font-face('NunitoSans-SemiBold', 600);
+@include font-face('NunitoSans-Bold', 700);
+@include font-face('NunitoSans-ExtraBold', 800);
+@include font-face('NunitoSans-Black', 900);
+
+@font-face {
+    font-family: 'icons';
+    src: url('../fonts/icons.eot');
+    src: url('../fonts/icons.eot') format('embedded-opentype'),
+    url('../fonts/icons.ttf') format('truetype'),
+    url('../fonts/icons.woff') format('woff'),
+    url('../fonts/icons.svg?u58lz4#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icons' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-coconut:before {
+    content: "\e921";
+}
+.icon-capers:before {
+    content: "\e924";
+}
+.icon-seafood:before {
+    content: "\e926";
+}
+.icon-avocado:before {
+    content: "\e927";
+}
+.icon-fish:before {
+    content: "\e932";
+}
+.icon-turkey:before {
+    content: "\e936";
+}
+.icon-onions:before {
+    content: "\e900";
+}
+.icon-plus-1:before {
+    content: "\e901";
+}
+.icon-info:before {
+    content: "\e902";
+}
+.icon-step8-ico8:before {
+    content: "\e903";
+}
+.icon-checked:before {
+    content: "\e904";
+}
+.icon-right-arrow:before {
+    content: "\e905";
+}
+.icon-quote:before {
+    content: "\e906";
+}
+.icon-star-outline:before {
+    content: "\e907";
+}
+.icon-star-solid:before {
+    content: "\e908";
+}
+.icon-skip:before {
+    content: "\e909";
+}
+.icon-eye:before {
+    content: "\e90a";
+}
+.icon-attention:before {
+    content: "\e90b";
+}
+.icon-check:before {
+    content: "\e90c";
+}
+.icon-filter:before {
+    content: "\e90d";
+}
+.icon-arrow-refresh:before {
+    content: "\e90e";
+}
+.icon-question1:before {
+    content: "\e90f";
+}
+.icon-pencil:before {
+    content: "\e910";
+}
+.icon-keto-solid:before {
+    content: "\e911";
+}
+.icon-step8-ico7:before {
+    content: "\e912";
+}
+.icon-step8-ico6:before {
+    content: "\e913";
+}
+.icon-step8-ico5:before {
+    content: "\e914";
+}
+.icon-step8-ico4:before {
+    content: "\e915";
+}
+.icon-step8-ico3:before {
+    content: "\e916";
+}
+.icon-step8-ico2:before {
+    content: "\e917";
+}
+.icon-step8-ico1:before {
+    content: "\e918";
+}
+.icon-step7-ico3:before {
+    content: "\e919";
+}
+.icon-step7-ico2:before {
+    content: "\e91a";
+}
+.icon-step7-ico1:before {
+    content: "\e91b";
+}
+.icon-minus:before {
+    content: "\e91c";
+}
+.icon-plus:before {
+    content: "\e91d";
+}
+.icon-prev-solid:before {
+    content: "\e91e";
+}
+.icon-next-solid:before {
+    content: "\e91f";
+}
+.icon-download:before {
+    content: "\e920";
+}
+.icon-close:before {
+    content: "\e922";
+}
+.icon-play:before {
+    content: "\e923";
+}
+.icon-olives:before {
+    content: "\e925";
+}
+.icon-milk:before {
+    content: "\e928";
+}
+.icon-butter:before {
+    content: "\e929";
+}
+.icon-cheese:before {
+    content: "\e92a";
+}
+.icon-nuts:before {
+    content: "\e92b";
+}
+.icon-egg:before {
+    content: "\e92c";
+}
+.icon-mushrooms:before {
+    content: "\e92d";
+}
+.icon-vegan:before {
+    content: "\e92e";
+}
+.icon-vegetarian:before {
+    content: "\e92f";
+}
+.icon-veal:before {
+    content: "\e930";
+}
+.icon-lamb:before {
+    content: "\e931";
+}
+.icon-beef:before {
+    content: "\e933";
+}
+.icon-pork:before {
+    content: "\e934";
+}
+.icon-chicken:before {
+    content: "\e935";
+}
+.icon-step3-ico3:before {
+    content: "\e937";
+}
+.icon-step3-ico2:before {
+    content: "\e938";
+}
+.icon-step3-ico1:before {
+    content: "\e939";
+}
+.icon-step2-ico5:before {
+    content: "\e93a";
+}
+.icon-step2-ico4:before {
+    content: "\e93b";
+}
+.icon-step2-ico3:before {
+    content: "\e93c";
+}
+.icon-step2-ico2:before {
+    content: "\e93d";
+}
+.icon-step2-ico1:before {
+    content: "\e93e";
+}
+.icon-next:before {
+    content: "\e93f";
+}
+.icon-credit-card:before {
+    content: "\e940";
+}
+.icon-angle-down:before {
+    content: "\e941";
+}
+.icon-info-2:before {
+    content: "\e942";
+}
+.icon-eye-1:before {
+    content: "\e943";
+}
+.icon-like:before {
+    content: "\e944";
+}
+.icon-contact-us:before {
+    content: "\e945";
+}
+.icon-profile:before {
+    content: "\e946";
+}
+.icon-Mask-3:before {
+    content: "\e947";
+}
+.icon-measurements:before {
+    content: "\e948";
+}
+.icon-books:before {
+    content: "\e949";
+}
+.icon-ico-12:before {
+    content: "\e94a";
+}
+.icon-time-square:before {
+    content: "\e94b";
+}
+.icon-Shape-3:before {
+    content: "\e94c";
+}
+.icon-save:before {
+    content: "\e94d";
+}
+.icon-print-1:before {
+    content: "\e94e";
+}
+.icon-filter-2:before {
+    content: "\e94f";
+}
+.icon-workouts:before {
+    content: "\e950";
+}
+.icon-water:before {
+    content: "\e951";
+}
+.icon-carbs:before {
+    content: "\e952";
+}
+.icon-calories:before {
+    content: "\e953";
+}
+.icon-activity:before {
+    content: "\e954";
+}
+.icon-height:before {
+    content: "\e955";
+}
+.icon-weight:before {
+    content: "\e956";
+}
+.icon-weight-2:before {
+    content: "\e957";
+}
+.icon-pencil-2:before {
+    content: "\e958";
+}
+.icon-question:before {
+    content: "\e959";
+}
+.icon-quotes-1:before {
+    content: "\e95a";
+}
+.icon-arrow-1:before {
+    content: "\e95b";
+}
+.icon-ask:before {
+    content: "\e95c";
+}
+.icon-te:before {
+    content: "\e95d";
+}
+.icon-fb:before {
+    content: "\e95e";
+}
+.icon-menu-7:before {
+    content: "\e95f";
+}
+.icon-menu-6:before {
+    content: "\e960";
+}
+.icon-menu-5:before {
+    content: "\e961";
+}
+.icon-menu-4:before {
+    content: "\e962";
+}
+.icon-menu-3:before {
+    content: "\e963";
+}
+.icon-menu-2:before {
+    content: "\e964";
+}
+.icon-menu-1:before {
+    content: "\e965";
+}
+.icon-logout:before {
+    content: "\e966";
+}
+.icon-supplements:before {
+    content: "\e967";
+}
+.icon-thumbs-up:before {
+    content: "\e968";
+}
+.icon-repeat:before {
+    content: "\e969";
+}
+.icon-clock:before {
+    content: "\e96a";
+}
+.icon-print:before {
+    content: "\e96b";
+}

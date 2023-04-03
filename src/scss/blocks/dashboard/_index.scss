@@ -1,0 +1,100 @@
+.dashboard{
+    position: relative;
+    width: 100%;
+
+    .panel {
+        box-shadow: $form-shadow;
+    }
+}
+
+.dashboard-modal {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    padding: 40px 45px !important;
+    background-color: $dashboard-bg;
+    border-radius: $corner;
+    overflow-x: hidden;
+
+    @include scrollbar(4px);
+
+    @include media-sm{
+        padding: 20px !important;
+    }
+
+    .is-close {
+        width: 30px;
+        height: 30px;
+        top: 15px !important;
+        right: 15px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background-color: $primary;
+        border-radius: 50%;
+        transition: $transition;
+    }
+
+    .is-close svg{
+        width: 15px !important;
+    }
+
+    .is-close:hover{
+        opacity: 0.8;
+    }
+
+    .is-close:focus {
+        box-shadow: none !important;
+        outline: none !important;
+        border: 0 !important;
+        color: inherit;
+    }
+
+    a{
+        outline: none !important;
+    }
+}
+
+.dashboard-modal.home-db-food-card-modal,
+.dashboard-modal.home-db-recipes-modal,
+.dashboard-modal.home-db-grocery-modal{
+    min-height: 80vh;
+}
+
+.dashboard .upsell{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .payment-popup{
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .woocommerce form .form-row label,
+    .woocommerce-page form .form-row label {
+        display: block;
+
+    }
+}
+
+@import 'sidebar';
+
+@import 'home/index';
+
+@import 'welcome';
+
+@import 'keto/index';
+
+@import 'supplements';
+
+@import 'workout';
+
+@import 'progress';
+
+@import 'books';
+
+@import 'faq';
+
+@import 'profile/index';
+
+@import 'contact';

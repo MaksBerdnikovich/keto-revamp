@@ -1,0 +1,19 @@
+{
+    "name": "holger1411/understrap-child",
+    "description": "Basic Child Theme for UnderStrap Theme Framework",
+    "type": "library",
+    "license": "GPL-2.0",
+    "minimum-stability": "stable",
+    "require": {
+        "nesbot/carbon": "^2.38",
+        "dompdf/dompdf": "^1.1.1",
+        "twilio/sdk": "^6.10",
+        "guzzlehttp/guzzle": "^7.0",
+        "stripe/stripe-php": "^7.60",
+        "deliciousbrains/wp-background-processing": "^1.0",
+        "shuchkin/simplexlsx": "^0.8.24",
+        "eseath/sypexgeo": "^2.2"
+    },
+    "keywords": ["wordpress","theme","bootstrap"],
+    "homepage": "https://github.com/holger1411/understrap-child"
+}

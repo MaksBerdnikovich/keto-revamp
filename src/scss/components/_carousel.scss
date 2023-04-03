@@ -1,0 +1,43 @@
+.carousel__dots{
+    display: none !important;
+}
+
+.carousel__button.is-prev,
+.carousel__button.is-next{
+    position: absolute;
+    top: -30px !important;
+    right: 0 !important;
+    left: inherit !important;
+    width: 34px;
+    height: 34px;
+    background-color: $dashboard-sidebar;
+    border-radius: 100%;
+    transition: $transition;
+
+    svg{
+        display: none;
+    }
+
+    &:hover, &:active {
+        opacity: 0.8;
+    }
+
+    &:before{
+        font-family: $font-family-icon;
+        content: '\e905';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        line-height: 1;
+        color: $gray;
+    }
+}
+
+.carousel__button.is-prev{
+    right: 45px !important;
+
+    &:before{
+        transform: scale(-1,1);
+    }
+}

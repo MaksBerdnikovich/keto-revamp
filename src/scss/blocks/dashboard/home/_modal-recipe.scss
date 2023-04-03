@@ -1,0 +1,48 @@
+.home-db-recipes-modal{
+    max-width: 1080px;
+
+    .home-db-plans__grid{
+        margin-top: 0;
+        padding: 0;
+
+        .grid-row {
+            margin: 0 -10px;
+        }
+
+        .grid-col {
+            padding: 0 10px;
+            margin-top: 20px;
+            min-width: 240px;
+        }
+
+        .grid-item{
+            min-height: 270px;
+        }
+    }
+}
+
+.search-recipe-container{
+    position: relative;
+    width: 100%;
+
+    .input-text{
+        width: 100%;
+        margin: 0;
+        box-shadow: $form-shadow !important;
+
+        &:focus{
+            outline: none !important;
+        }
+    }
+
+    .btn{
+        min-width: 230px;
+    }
+}
+
+.recipes-modal__btn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}

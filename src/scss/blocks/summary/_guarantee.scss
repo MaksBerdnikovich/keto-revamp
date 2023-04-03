@@ -1,0 +1,35 @@
+.summary-guarantee {
+    position: relative;
+}
+
+.summary-guarantee .landing-keto-plan{
+    background-color: transparent;
+    padding: 0;
+
+    &:after {
+        display: none;
+    }
+}
+
+.summary-guarantee .landing-keto-plan .landing-text{
+    @include media-sm{
+        text-align: center;
+    }
+
+    p{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    b{
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+}
+
+.summary-guarantee .landing-keto-plan .landing-subtitle{
+    text-align: center;
+}

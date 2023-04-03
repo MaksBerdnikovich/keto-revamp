@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+// layouts
+@import "layout-quiz";
+@import "layout-landing";
+@import "layout-dashboard";
+
+.container{
+   // outline: 1px solid #cc0000;
+}
+
+//Compensate fancy popup show
+body.compensate-for-scrollbar .back-image.image--top-right,
+body.compensate-for-scrollbar .back-image.image--bottom-right {
+    right: 10px;
+}
+
+// Typography
+.title-xlarge{
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+}
+h1, .title-h1{
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1.2;
+
+    @include media-sm{
+        font-size: 40px;
+    }
+}
+
+h2, .title-h2{
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.2;
+
+    @include media-sm{
+        font-size: 30px;
+    }
+}
+
+h3, .title-h3 {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.2;
+
+    @include media-sm{
+        font-size: 24px;
+    }
+}
+
+h4, .title-h4 {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+
+    @include media-sm{
+        font-size: 22px;
+    }
+}
+
+h5, .title-h5 {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.2;
+
+    @include media-sm{
+        font-size: 18px;
+    }
+}
+
+h6, .title-h6 {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.2;
+
+    @include media-sm{
+        font-size: 16px;
+    }
+}
+
+p,
+.text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+
+    &.centered{
+        text-align: center;
+    }
+}
+
+b,
+.tx-bold{
+    font-weight: 700;
+}
+.tx-bolder{
+    font-weight: 800;
+}
+.tx-black {
+    font-weight: 900;
+}
+.tx-capitalize{
+    text-transform: capitalize;
+}
+.tx-repeat{
+    p + p{
+        margin-top: 1em;
+    }
+}
+
+// Elements
+a, .link{
+    text-decoration: none;
+    color: inherit;
+    transition: $transition;
+    cursor: pointer;
+}
+.link {
+    text-decoration: underline;
+}
+.link:hover{
+    text-decoration: underline;
+    color: $primary;
+}
+
+button {
+    cursor: pointer;
+    transition: $transition;
+
+    &:disabled{
+        opacity: 0.4 !important;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    &.no-crop {
+        width: auto;
+        display: inline;
+
+        @include media-mdx{
+            width: 100%;
+        }
+    }
+}
+
+ul{
+    list-style-type: none;
+}
+
+// Margins
+.m-top-1 {
+    margin-top: 1em !important;
+}
+.m-top-2 {
+    margin-top: 2em !important;
+}
+.m-top-3 {
+    margin-top: 3em !important;
+}
+.m-top-4 {
+    margin-top: 4em !important;
+}
+.m-bottom-05 {
+    margin-bottom: 0.5em !important;
+}
+.m-bottom-0 {
+    margin-bottom: 0 !important;
+}
+.m-bottom-1 {
+    margin-bottom: 1em !important;
+}
+.m-bottom-1_5 {
+    margin-bottom: 1.5em !important;
+}
+.m-bottom-2 {
+    margin-bottom: 2em !important;
+}
+.m-bottom-2_5 {
+    margin-bottom: 2.5em !important;
+}
+.m-bottom-3 {
+    margin-bottom: 3em !important;
+}
+
+// Flex
+.fl-full{
+    display: flex;
+    align-items: center;
+}
+.fl-inline{
+    display: inline-flex;
+    align-items: center;
+}
+.fl-column{
+    display: flex;
+    flex-direction: column;
+}
+.fl-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+// Colors
+.primary-color{
+    color: $primary;
+}
+.secondary-color{
+    color: $secondary;
+}
+.success-color{
+    color: $success;
+}
+.danger-color{
+    color: $danger;
+}
+.gray-color{
+    color: $gray;
+}
+
+// Single pages
+.single-page {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.single-page-404 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: calc(100vh - 200px);
+}
+
+.single-page .back-link{
+    position: relative;
+    width: 100%;
+}
+
+.single-page .back-link a{
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+    color: $gray;
+
+    &:hover{
+        opacity: 0.8;
+    }
+
+    i{
+        transform: scale(-1,1);
+        margin-right: 5px;
+    }
+}

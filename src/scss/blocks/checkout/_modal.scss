@@ -1,0 +1,145 @@
+.payment-popup {
+    position: relative;
+    width: 100%;
+    max-width: 780px;
+    min-height: 100%;
+    padding: 0 !important;
+    background-color: transparent !important;
+    cursor: auto !important;
+
+    .preloader{
+        position: absolute;
+        width: calc(100% - 30px);
+        left: 15px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $light;
+        border-radius: $corner;
+    }
+}
+
+.payment-popup__form{
+    position: relative;
+    width: 100%;
+}
+
+.payment-popup__form .card-row{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0;
+
+    @include media-sm {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.payment-popup__form .paymentOpt{
+    display: flex;
+    align-items: center;
+
+    i{
+        &:before {
+            font-size: 30px;
+        }
+    }
+}
+
+.payment-popup__form .accept-card{
+    display: flex;
+    align-items: center;
+
+    @include media-sm {
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    span {
+        padding-right: 10px;
+    }
+
+    img{
+        max-height: 30px;
+        width: auto;
+    }
+}
+
+.payment-popup__form .card-box{
+    b{
+        font-weight: 800;
+    }
+
+    a{
+        color: $primary;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+.payment-popup__form .wc-credit-card-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    padding: 0;
+    margin: 25px 0 0 0;
+}
+
+.payment-popup__form .chk-prc{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media-sm {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .total-sum{
+        font-weight: 800;
+        font-size: 25px;
+        color: $primary;
+    }
+
+    p{
+        font-weight: 700;
+    }
+
+    img {
+        max-height: 30px;
+        width: auto;
+
+        @include media-sm {
+            margin-top: 10px;
+        }
+    }
+}
+
+.payment-popup__form .woocommerce-error{
+    margin-top: 10px;
+    font-weight: 700;
+    color: $danger;
+    border-top-color: $danger;
+    background-color: $gray-lighter;
+
+    &:before {
+        color: $danger;
+
+        @include media-sm {
+            left: 10px;
+        }
+    }
+
+    @include media-sm {
+        padding-left: 35px;
+        padding-right: 10px;
+    }
+}

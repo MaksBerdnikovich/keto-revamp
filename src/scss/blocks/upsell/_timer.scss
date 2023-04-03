@@ -1,0 +1,61 @@
+.upsell-timer {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+.upsell-timer__wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.upsell-timer__list{
+    position: relative;
+
+    ul{
+        display: flex;
+        justify-content: center;
+    }
+
+    li {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    li.sep {
+        padding: 0 25px;
+
+        @include media-sm{
+            padding: 0 10px;
+        }
+    }
+
+    li.sep b{
+        display: flex;
+        align-items: center;
+        height: 56px;
+        font-size: 20px;
+    }
+
+    li:not(.sep) b{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        border-radius: 100%;
+        background-color: $success;
+        box-shadow: $form-shadow;
+        font-size: 20px;
+        color: $white;
+    }
+
+    li:not(.sep) span{
+        padding-top: 5px;
+    }
+}

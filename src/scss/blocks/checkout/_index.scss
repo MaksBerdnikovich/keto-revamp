@@ -1,0 +1,26 @@
+.woocommerce{
+    position: relative;
+    width: 100%;
+}
+
+.woocommerce-order-received .back-image.image--bottom-left,
+.woocommerce-order-received .back-image.image--bottom-right{
+    display: none;
+}
+
+.checkout {
+    position: relative;
+    width: 100%;
+}
+
+@import "email";
+
+@import "plans";
+
+@import "bonus";
+
+@import "modal";
+
+@import "thanks";
+
+

@@ -1,0 +1,40 @@
+.books-db{
+    position: relative;
+
+    .grid .grid-row{
+        justify-content: center;
+    }
+
+    .grid .grid-col{
+        margin-bottom: 30px;
+
+        @include media-md{
+            width: calc(100% / 3) !important;
+        }
+
+        @include media-sm{
+            width: 50% !important;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        @include media-xsm{
+            width: 100% !important;
+        }
+    }
+
+    .grid .grid-item:hover {
+        opacity: 0.8;
+        transition: $transition;
+    }
+
+    .grid .grid-item img{
+        width: 100%;
+        height: auto;
+        border-radius: $corner;
+        box-shadow: $shadow-bottom;
+    }
+}
+

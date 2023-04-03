@@ -1,0 +1,42 @@
+.landing-truth{
+    position: relative;
+    width: 100%;
+    background-color: $white;
+    z-index: 15;
+
+    @include media-sm {
+        padding: 2em 0 0 0;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 164px;
+        top: -82px;
+        left: 0;
+        background-image: url("../../dist/images/landing/truth/waves.png");
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 164px;
+        bottom: -82px;
+        left: 0;
+        background-image: url("../../dist/images/landing/truth/waves2.png");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+}
+
+.landing-truth__image{
+    margin-top: -80px;
+
+    @include media-sm {
+        margin-top: 0px;
+    }
+}

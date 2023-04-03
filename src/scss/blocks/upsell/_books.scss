@@ -1,0 +1,20 @@
+.upsell-books{
+    position: relative;
+    margin: 2em 0;
+
+    .grid-row {
+        justify-content: center;
+    }
+
+    @include media-sm{
+        .grid-col.col-25 {
+            width: 50% !important;
+        }
+    }
+
+    @include media-xsm{
+        .grid-col.col-25 {
+            width: 100% !important;
+        }
+    }
+}

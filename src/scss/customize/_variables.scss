@@ -1,0 +1,69 @@
+// fonts
+$font-family: 'NunitoSans';
+$font-family-icon: 'icons';
+
+// gray color variables
+$white: #ffffff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000000;
+
+// color variables
+$blue: #0d6efd;
+$indigo: #6610f2;
+$purple: #EA6BFF;
+$pink: #d63384;
+$red: #F15E6B;
+$orange: #fd7e14;
+$yellow: #FDB952;
+$green: #198754;
+$teal: #1ED487;
+$cyan: #0dcaf0;
+
+// theme color variables
+$primary: #006BE5;
+$primary-dark: #0049e5;
+$secondary-light: #EEEEEE;
+$secondary: #C4C4C4;
+$secondary-dark: #999999;
+$success: #1ED487;
+$success-dark: #00A61E;
+$danger: #F15E6B;
+$warning: #FDB952;
+$info: #EA6BFF;
+$light: #FBFBFD;
+$dark: #303030;
+$gray: #617781;
+$gray-light: #E7E7E7;
+$gray-lighter: #E9E9EB;
+$db-elements: #EBEBF2;
+
+// backgrounds
+$body: #E9E9EB;
+$scroll-bg: rgba(119, 119, 119, 0.3);
+$scroll-bg-track: transparent;
+$landing-bg: #F2EDEF;
+$dashboard-bg: #FBFBFD;
+$dashboard-sidebar: #EBEBF2;
+
+// transitions
+$transition: all .3s linear;
+$form-transition: all .2s linear;
+
+// shadows
+$section-shadow: 0px 6px 40px rgba(0, 0, 0, 0.12);
+$shadow-bottom: 0px 0px 15px 3px rgba(0, 0, 0, .05);
+$shadow-bottom-db: 0px 6px 30px rgba(0, 0, 0, 0.05);
+$form-shadow: 0px 3px 10px rgba(0, 0, 0, 0.08);
+$success-shadow: 0px 4px 18px rgba(30, 212, 135, 0.26);
+$shadow-db-elements: 0px 3px 4px rgba(0, 0, 0, 0.1);
+
+// corners
+$corner: 16px;

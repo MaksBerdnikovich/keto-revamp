@@ -1,0 +1,42 @@
+.footer-db{
+    position: relative;
+}
+.footer-db__menu{
+    position: relative;
+    width: 100%;
+
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    li{
+        padding: 10px 25px;
+        text-align: center;
+
+        @include media-sm{
+            padding: 10px;
+        }
+    }
+
+    a{
+        font-size: 15px;
+        color: $gray;
+
+        &:hover{
+            color: $primary;
+        }
+    }
+}
+
+.footer.footer-single-page .footer-db__menu{
+
+    li:last-child{
+        display: none;
+    }
+
+    a{
+       font-weight: 400;
+    }
+}
